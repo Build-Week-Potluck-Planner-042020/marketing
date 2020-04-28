@@ -7,8 +7,7 @@
 
     .checkbox:checked ~ .navigation_background
     {
-        transform: scale( 140 );
-
+        transform: scale( 240 );
     }
 
     .checkbox:checked ~ .nav
@@ -17,31 +16,95 @@
         width: 100%;
     }
 
+    .checkbox:checked + .button .button_style
+    {
+       background: transparent;
+    } 
+
+    .checkbox:checked + .button .button_style::before
+    {
+        top: 0;
+        transform: rotate( 45deg );
+    } 
+
+    .checkbox:checked + .button .button_style::after
+    {
+        top: 0;
+        transform: rotate( -45deg );
+    } 
+
     .button
     {
-        height: 4rem;
-        width: 4rem;
-        border-radius: 50%;
-        background-color: orange;
         position: fixed;
-        top: 0.5rem;
-        right: 0.5rem;
+        top: 1.4rem;
+        right: 2.1rem;
         z-index: 10;
-
-
+        height: 2.7rem;
+        width: 2.7rem;
+        border-radius: 50%;
+        background-color: whitesmoke;
         box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
+        cursor: pointer;
+
+        &:hover ::before
+        {
+            top: -0.6rem;
+        }
+    
+        &:hover ::after
+        {
+            top: 0.6rem;
+        }
+
+        .button_style
+        { 
+            position: relative;
+            top: 20px;
+            right: -9px;
+
+            &, 
+            &::before,
+            &::after
+            {
+                width: 1.6rem;
+                height: 2px;
+                display: inline-block;
+                background-color: black;
+            }
+
+
+            &::before, 
+            &::after
+            {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all 0.1s;
+            }
+
+            &::before
+            {
+                top: -0.4rem;    }
+
+
+            &::after
+            {
+                top: 0.4rem;
+            }
+        }
     }
 
     .navigation_background
     {
-        height: 2rem;
-        width: 2rem;
+        height: 1rem;
+        width: 1rem;
         border-radius: 50%;
         position: fixed;
-        top: 1rem;
-        right: 1.5rem;
+        top: 1.6rem;
+        right: 2.7rem;
         background-image: radial-gradient( black, red );
         z-index: 8;
+        transition: all 0.8s ease-in;
         //transform: scale( 130 );
     }
 
@@ -54,6 +117,8 @@
         right: 0;
         z-index: 9;
         opacity: 0;
+        transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
+
 
         .nav_list
         {
@@ -64,6 +129,7 @@
             list-style: none;
             .item
             {
+              
                 margin: 55px;
                 .link
                 {
@@ -78,3 +144,9 @@
         }
     }
 }
+
+
+
+
+
+
