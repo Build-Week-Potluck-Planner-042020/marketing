@@ -126,6 +126,63 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.navigation .checkbox {
+  display: none;
+}
+.navigation .checkbox:checked ~ .navigation_background {
+  transform: scale(140);
+}
+.navigation .checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+}
+.navigation .button {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: orange;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.navigation .navigation_background {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  background-image: radial-gradient(black, red);
+  z-index: 8;
+}
+.navigation .nav {
+  height: 100vh;
+  width: 0%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  opacity: 0;
+}
+.navigation .nav .nav_list {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+.navigation .nav .nav_list .item {
+  margin: 55px;
+}
+.navigation .nav .nav_list .item .link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: whitesmoke;
+  padding: 50px;
+}
 .header {
   height: 95vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/hero_small.jpg");
