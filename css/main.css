@@ -303,10 +303,24 @@ table {
   width: 100%;
   height: 200px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-.section_explore div {
-  width: 80%;
-  text-align: center;
+.section_explore h2 {
+  margin-bottom: 25px;
+}
+.section_explore .section_container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section_explore .section_container p {
+  background-color: pink;
+}
+.section_explore .section_container .section_image img {
+  display: block;
+  width: 100%;
 }
