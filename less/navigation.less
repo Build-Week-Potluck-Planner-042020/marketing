@@ -7,6 +7,8 @@
 
     .checkbox:checked ~ .navigation_background
     {
+        -webkit-transform: scale( 120 );
+        -ms-transform: scale( 120 );
         transform: scale( 120 );
     }
 
@@ -24,13 +26,17 @@
     .checkbox:checked + .button .button_style::before
     {
         top: 0;
-        transform: rotate( 45deg );
+        -webkit-transform: rotate( 45deg );
+        -ms-transform: rotate( 45deg );
+                transform: rotate( 45deg );
     } 
 
     .checkbox:checked + .button .button_style::after
     {
         top: 0;
-        transform: rotate( -45deg );
+        -webkit-transform: rotate( -45deg );
+        -ms-transform: rotate( -45deg );
+                transform: rotate( -45deg );
     } 
 
     .button
@@ -43,7 +49,8 @@
         width: 2.7rem;
         border-radius: 50%;
         background-color: whitesmoke;
-        box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
+        -webkit-box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
+                box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
         cursor: pointer;
 
         &:hover ::before
@@ -79,6 +86,8 @@
                 content: "";
                 position: absolute;
                 left: 0;
+                -webkit-transition: all 0.1s;
+                -o-transition: all 0.1s;
                 transition: all 0.1s;
             }
 
@@ -102,8 +111,11 @@
         position: fixed;
         top: 1.6rem;
         right: 2.7rem;
+        background-image: -o-radial-gradient(rgb(126, 65, 19), #491C00 );
         background-image: radial-gradient(rgb(126, 65, 19), #491C00 );
         z-index: 8;
+        -webkit-transition: all 0.8s ease-in;
+        -o-transition: all 0.8s ease-in;
         transition: all 0.8s ease-in;
         //transform: scale( 130 );
     }
@@ -117,15 +129,19 @@
         right: 0;
         z-index: 9;
         opacity: 0;
+        -webkit-transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
+        -o-transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
         transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
 
 
         .nav_list
-        {
+        { 
             position: absolute;
             top: 30%;
             left: 50%;
-            transform: translate( -50%, -50% );
+            -webkit-transform: translate( -50%, -50% );
+            -ms-transform: translate( -50%, -50% );
+                    transform: translate( -50%, -50% );
             list-style: none;
             .item
             {
