@@ -1,0 +1,55 @@
+
+
+
+h2.gallery_header
+{
+    color: @secondary_brown;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 60px 0px 80px;
+}
+
+
+
+
+.gallery_images 
+{
+    width: 80%; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 50px;
+
+    .gallery_image 
+    {
+        height: 250px;
+        flex-grow: 1;
+        margin: 0 0 8px 8px;
+
+        &:nth-child( 4n + 1 ) 
+        {
+            flex-basis: 250px;
+        }
+        
+        &:nth-child( 4n + 2 ) 
+        {
+            flex-basis: 325px;
+        }
+        
+        &:nth-child( 4n + 3 ) 
+        {
+            flex-basis: 400px;
+        }
+        
+        &:nth-child( 4n + 4 ) 
+        {
+            flex-basis: 380px;
+        }
+
+        img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
