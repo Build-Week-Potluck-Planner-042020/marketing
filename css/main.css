@@ -288,18 +288,18 @@ table {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/hero_small.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_small.jpg");
   background-size: cover;
   background-position: bottom;
 }
 @media ( min-width: 700px ) {
   .header::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/hero_medium.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_medium.jpg");
   }
 }
 @media ( min-width: 1200px ) {
   .header::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/hero_large.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_large.jpg");
   }
 }
 .header .logo_div {
@@ -596,6 +596,8 @@ h2.gallery_header {
 }
 .header_about_us::before {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_small.jpg");
+  background-size: cover;
+  background-position: center;
 }
 @media ( min-width: 700px ) {
   .header_about_us::before {
@@ -606,21 +608,6 @@ h2.gallery_header {
   .header_about_us::before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_large.jpg");
   }
-}
-.about_explore {
-  background: none;
-}
-.about_explore .brown_area {
-  width: 100%;
-  height: 20px;
-  background: #A7632F;
-}
-.about_explore h2 {
-  margin-top: 80px;
-  color: #B5854E;
-}
-.about_explore .section_text p {
-  color: #B5854E;
 }
 .footer {
   height: 150px;
