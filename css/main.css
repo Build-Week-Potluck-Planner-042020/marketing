@@ -231,17 +231,45 @@ table {
   list-style: none;
 }
 .navigation .nav .nav_list .item {
-  background-color: blue;
   margin: 65px 0;
   text-align: center;
+  width: 100%;
 }
 .navigation .nav .nav_list .item .link {
-  background-color: red;
+  display: inline-block;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 400;
   color: whitesmoke;
-  margin: 50px;
+  width: 100%;
+  padding: 20px 50px;
+  border: 2px solid whitesmoke;
+  transition: all 0.6s;
+}
+.navigation .nav .nav_list .item .link:hover {
+  opacity: 1;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  color: #A7632F;
+  background-color: whitesmoke;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 .header {
   height: 90vh;
@@ -294,11 +322,16 @@ table {
   opacity: 0;
   color: #cecece;
   display: block;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1.6rem;
   text-align: center;
   text-transform: uppercase;
+}
+@media ( min-width: 400px ) {
+  .header .headings .primary_header .primary_header_title {
+    font-size: 2.2rem;
+  }
 }
 @media ( min-width: 700px ) {
   .header .headings .primary_header .primary_header_title {
@@ -351,8 +384,13 @@ table {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 200px;
+  height: 400px;
   background-color: #A7632F;
+}
+@media ( min-width: 400px ) {
+  .section_explore {
+    height: 205px;
+  }
 }
 .section_explore h2 {
   margin: 20px 0 10px 0;
@@ -510,8 +548,102 @@ table {
   background-color: #B5854E;
   border-color: #B5854E;
 }
-footer {
-  height: 300px;
+.header_about_us {
+  height: 400px;
+}
+.header_about_us::before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_small.jpg");
+}
+@media ( min-width: 700px ) {
+  .header_about_us::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_medium.jpg");
+  }
+}
+@media ( min-width: 1200px ) {
+  .header_about_us::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_large.jpg");
+  }
+}
+.about_explore {
+  background: none;
+}
+.about_explore .brown_area {
+  width: 100%;
+  height: 20px;
+  background: #A7632F;
+}
+.about_explore h2 {
+  margin-top: 80px;
+  color: #B5854E;
+}
+.about_explore .section_text p {
+  color: #B5854E;
+}
+.footer {
+  height: 150px;
   width: 100%;
   background-color: #A7632F;
+  color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+}
+.footer .stay_connected {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media ( min-width: 500px ) {
+}
+.footer .stay_connected h4 {
+  font-size: 1.6rem;
+  padding: 10px 0;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.footer .stay_connected p {
+  font-size: 1.1rem;
+  display: inline-block;
+}
+.footer .stay_connected .email {
+  margin-top: 15px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+.footer .stay_connected .email i {
+  border: 1px solid white;
+  color: white;
+  width: 40px;
+  line-height: 40px;
+}
+.footer .stay_connected .email input {
+  border: none;
+  outline: none;
+  width: 0px;
+  transition: 0.8s;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.footer .stay_connected .email button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0 10px;
+  height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.footer .stay_connected .email button:hover {
+  background-color: white;
+  color: #A7632F;
+}
+.footer .stay_connected .email:hover > input,
+.footer .stay_connected .email input:focus {
+  width: 260px;
+  padding: 0 10px;
 }

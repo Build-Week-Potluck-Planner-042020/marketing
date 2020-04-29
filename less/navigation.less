@@ -26,7 +26,7 @@
         opacity: 1;
         width: 100%;
     }
-
+  
     .checkbox:checked + .button .button_style
     {
        background: transparent;
@@ -130,7 +130,7 @@
         z-index: 9;
         opacity: 0;
         transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
-
+        
 
         .nav_list
         { 
@@ -142,21 +142,52 @@
 
             .item
             {
-              
-                background-color: blue;
                 margin: 65px 0;
                 text-align: center;
+                width: 100%;
+                
 
                 .link
                 {
-                    background-color: red;
+                    
+                    display: inline-block;
                     text-decoration: none;
                     font-size: 1.4rem;
                     font-weight: 400;
                     color:whitesmoke;
-                    margin: 50px;
+                    // margin: 50px;
+                    width: 100%;
+                    padding: 20px 50px;
+                    border: 2px solid whitesmoke;
+                    transition: all 0.6s;
+                 
+                    &:hover
+                    {
+                        opacity: 1;
+                        animation: shake 1s cubic-bezier( 0.36, 0.07, 0.19, 0.97) both;
+                        color: @main_brown;
+                        background-color: whitesmoke;
+                    }
                 }
             }
         }
     }
 }
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
