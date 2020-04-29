@@ -7,9 +7,18 @@
 
     .checkbox:checked ~ .navigation_background
     {
-        -webkit-transform: scale( 120 );
-        -ms-transform: scale( 120 );
-        transform: scale( 120 );
+
+        transform: scale( 145 );
+
+        @media @medium
+        {
+            transform: scale( 200 );
+        }
+
+        @media @large
+        {
+            transform: scale( 300 );
+        }
     }
 
     .checkbox:checked ~ .nav
@@ -26,17 +35,13 @@
     .checkbox:checked + .button .button_style::before
     {
         top: 0;
-        -webkit-transform: rotate( 45deg );
-        -ms-transform: rotate( 45deg );
-                transform: rotate( 45deg );
+        transform: rotate( 45deg );
     } 
 
     .checkbox:checked + .button .button_style::after
     {
         top: 0;
-        -webkit-transform: rotate( -45deg );
-        -ms-transform: rotate( -45deg );
-                transform: rotate( -45deg );
+        transform: rotate( -45deg );
     } 
 
     .button
@@ -49,13 +54,13 @@
         width: 2.7rem;
         border-radius: 50%;
         background-color: whitesmoke;
-        -webkit-box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
-                box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
+        box-shadow: 0 1rem 3rem rgba( 0,0,0, 0.1 );
         cursor: pointer;
 
         &:hover ::before
         {
             top: -0.6rem;
+           
         }
     
         &:hover ::after
@@ -86,8 +91,6 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                -webkit-transition: all 0.1s;
-                -o-transition: all 0.1s;
                 transition: all 0.1s;
             }
 
@@ -111,11 +114,8 @@
         position: fixed;
         top: 1.6rem;
         right: 2.7rem;
-        background-image: -o-radial-gradient(rgb(126, 65, 19), #491C00 );
         background-image: radial-gradient(rgb(126, 65, 19), #491C00 );
         z-index: 8;
-        -webkit-transition: all 0.8s ease-in;
-        -o-transition: all 0.8s ease-in;
         transition: all 0.8s ease-in;
         //transform: scale( 130 );
     }
@@ -129,8 +129,6 @@
         right: 0;
         z-index: 9;
         opacity: 0;
-        -webkit-transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
-        -o-transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
         transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
 
 
@@ -139,22 +137,24 @@
             position: absolute;
             top: 30%;
             left: 50%;
-            -webkit-transform: translate( -50%, -50% );
-            -ms-transform: translate( -50%, -50% );
-                    transform: translate( -50%, -50% );
+            transform: translate( -50%, -50% );
             list-style: none;
+
             .item
             {
               
-                margin: 55px;
+                background-color: blue;
+                margin: 65px 0;
+                text-align: center;
+
                 .link
                 {
+                    background-color: red;
                     text-decoration: none;
                     font-size: 1.4rem;
                     font-weight: 400;
                     color:whitesmoke;
-                    padding: 50px;
-                    //background-color: yellow;
+                    margin: 50px;
                 }
             }
         }

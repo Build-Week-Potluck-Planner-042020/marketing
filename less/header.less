@@ -1,30 +1,35 @@
 .header
 {
     height: 90vh;
-    -webkit-clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 95% );
-            clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 95% );
     position: relative;
-    
+    background-color: rgb(0, 0, 0);
     overflow: hidden;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
     &::before
     {
         content: "";
         opacity: 0;
-        -webkit-animation: fade 2s ease-out forwards;
-                animation: fade 2s ease-out forwards;
+        animation: fade 2s ease-out forwards;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         z-index: -1;
-        background: -webkit-gradient( linear, left top, left bottom, from(rgba( 0, 0, 0, 0.6 )),to(rgba( 0, 0, 0, 0.9 )) ), url( "../images/hero_small.jpg" );
-        background: -o-linear-gradient( top, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/hero_small.jpg" );
         background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/hero_small.jpg" );
         background-size: cover;
         background-position: bottom;
+
+        @media @medium
+        {
+            background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/hero_medium.jpg" );
+        }
+
+        @media @large
+        {
+            background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/hero_large.jpg" );
+        }
     }
 
     .logo_div
@@ -45,9 +50,7 @@
         position: absolute;
         top: 40%;
         left: 50%;
-        -webkit-transform: translate( -50%, -50% );
-        -ms-transform: translate( -50%, -50% );
-                transform: translate( -50%, -50% );
+        transform: translate( -50%, -50% );
 
         .primary_header
         {
@@ -55,7 +58,6 @@
            
             .primary_header_title
             {
-                -webkit-animation: fade 2s ease-out forwards 0.8s;
                 animation: fade 2s ease-out forwards 0.8s;
                 opacity: 0;
                 color: rgb(206, 206, 206);
@@ -65,13 +67,22 @@
                 letter-spacing: 1.6rem;
                 text-align: center;
                 text-transform: uppercase;
+
+                @media @medium
+                {
+                    font-size: 2.6rem;
+                }
+
+                @media @large
+                {
+                    font-size: 2.9rem;
+                }
             }
 
             .primary_header_subtitle
             {
                 opacity: 0;
-                -webkit-animation: fade 2s ease-out forwards 1.4s;
-                        animation: fade 2s ease-out forwards 1.4s;
+                animation: fade 2s ease-out forwards 1.4s;
                 color : #D1AB74;
                 //color: #A7632F;
                 margin-top: 10px;
@@ -82,29 +93,22 @@
                 text-transform: uppercase;
                 width: 100%;
                 text-align: center;
+
+                @media @medium
+                {
+                    font-size: 1.4rem;
+                }
+
+                @media @large
+                {
+                    font-size: 1.6rem;
+                }
             }
         }
     }
 }
 
 //Animations
-@-webkit-keyframes fade
-{
-    0%
-    {
-        opacity: 0;
-        -webkit-transform: translateY( -3rem );
-                transform: translateY( -3rem );
-    }
-
-    100%
-    {
-        opacity: 1;
-        -webkit-transform: none;
-                transform: none;
-    }
-}
-
 @keyframes fade
 {
     0%
