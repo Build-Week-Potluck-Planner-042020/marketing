@@ -127,6 +127,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 .navigation .checkbox {
   display: none;
 }
@@ -288,18 +298,22 @@ table {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_small.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_small.jpg");
   background-size: cover;
   background-position: bottom;
 }
 @media ( min-width: 700px ) {
   .header::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_medium.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_medium.jpg");
+    background-size: cover;
+    background-position: bottom;
   }
 }
 @media ( min-width: 1200px ) {
   .header::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_large.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_large.jpg");
+    background-size: cover;
+    background-position: bottom;
   }
 }
 .header .logo_div {
@@ -364,18 +378,6 @@ table {
 @media ( min-width: 1200px ) {
   .header .headings .primary_header .primary_header_subtitle {
     font-size: 1.6rem;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-3rem);
-    transform: translateY(-3rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 .section_explore {
@@ -532,6 +534,7 @@ table {
   color: white;
   font-size: 1rem;
   letter-spacing: 1.2px;
+  margin: 15px 38px 0;
 }
 .cards .card .content:hover .tags {
   transform: translateX(0%);
@@ -591,22 +594,23 @@ h2.gallery_header {
   height: 100%;
   object-fit: cover;
 }
-.header_about_us {
-  height: 400px;
-}
 .header_about_us::before {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_small.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_small.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 @media ( min-width: 700px ) {
   .header_about_us::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_medium.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_medium.jpg");
+    background-size: cover;
+    background-position: bottom;
   }
 }
 @media ( min-width: 1200px ) {
   .header_about_us::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_large.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_large.jpg");
+    background-size: cover;
+    background-position: bottom;
   }
 }
 .developers {
@@ -620,7 +624,7 @@ h2.gallery_header {
   width: 80%;
   height: 350px;
   position: relative;
-  margin: 50px 0 30px;
+  margin: 15px 15px;
 }
 @media ( min-width: 700px ) {
   .developer {
@@ -672,6 +676,18 @@ h2.gallery_header {
   transform: scale(0);
   opacity: 0;
   transition: all 1s;
+}
+.developer .developer_content h4 {
+  color: white;
+  font-size: 1.4rem;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+.developer .developer_content p {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  margin: 15px 38px 0;
 }
 .developer:hover .developer_content {
   opacity: 1;

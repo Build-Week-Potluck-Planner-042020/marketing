@@ -2,21 +2,17 @@
 {
     margin: 100px auto;
     width: 80%;
-    // text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
 }
-
-
 
 .developer
 {
     width: 80%;
     height: 350px;
     position: relative;
-    margin: 50px 0 30px;
+    margin: 15px 15px;
 
     @media @medium
     {
@@ -78,6 +74,22 @@
         transform: scale( 0 );
         opacity: 0;
         transition: all 1s;
+
+        h4
+        {
+            color: white;
+            font-size: 1.4rem;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+
+        p
+        {
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 1.2px;
+            margin: 15px 38px 0; 
+        }
     }
 
     &:hover .developer_content
@@ -86,54 +98,33 @@
         transform: scale( 1 );
     }
 }
-body{
-
-}
 
 .developers .developer:nth-child( 2 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/lasagne.jpg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8, "../images/developers/lasagne.jpg" );
 }
 
 .developers .developer:nth-child( 3 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/mac_cheese.jpg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8, "../images/developers/mac_cheese.jpg" );
 }
 
 .developers .developer:nth-child( 4 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/ice_cream.jpg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8, "../images/developers/ice_cream.jpg" );
 }
 
 .developers .developer:nth-child( 5 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/hamburguer.jpeg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8, "../images/developers/hamburguer.jpeg" );
 }
 
 .developers .developer:nth-child( 7 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/pizza.jpg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8,"../images/developers/pizza.jpg" );
 }
 
 .developers .developer:nth-child( 8 ) .developer_information 
 {
-    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.8 ) ), url( "../images/developers/chocolate.jpg" );
-            
-    background-size: cover;
-    background-position: bottom;
+    .background( 0.8, "../images/developers/chocolate.jpg" );
 }

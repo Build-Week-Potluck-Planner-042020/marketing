@@ -17,18 +17,17 @@
         bottom: 0;
         left: 0;
         z-index: -1;
-        background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/headers/hero_small.jpg" );
-        background-size: cover;
-        background-position: bottom;
-
+        
+        .background( 0.9, "../images/headers/hero_platter_small.jpg" );
+     
         @media @medium
         {
-            background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/headers/hero_medium.jpg" );
+            .background( 0.9, "../images/headers/hero_platter_medium.jpg" );
         }
 
         @media @large
         {
-            background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, 0.9 ) ), url( "../images/headers/hero_large.jpg" );
+            .background( 0.9, "../images/headers/hero_platter_large.jpg" );
         }
     }
 
@@ -110,20 +109,3 @@
     }
 }
 
-//Animations
-@keyframes fade
-{
-    0%
-    {
-        opacity: 0;
-        -webkit-transform: translateY( -3rem );
-                transform: translateY( -3rem );
-    }
-
-    100%
-    {
-        opacity: 1;
-        -webkit-transform: none;
-                transform: none;
-    }
-}

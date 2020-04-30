@@ -1,11 +1,7 @@
-
-
 // Theme Colors
 @main_brown : #A7632F;
 @secondary_brown : #B5854E;
 @lighter_brown: #D1AB74;
-
-
 
 // Media
 @small  : ~"( min-width: 400px )";
@@ -18,3 +14,27 @@
 
 // Special Footer Medias
 @footer_min : ~"( min-width: 500px )";
+
+// Functions 
+.background( @value, @file_path )
+{
+    background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.6 ),rgba( 0, 0, 0, @value ) ), url( @file_path );
+    background-size: cover;
+    background-position: bottom;
+}
+
+// Animations
+@keyframes fade
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY( -3rem );
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: none;
+    }
+}
