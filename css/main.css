@@ -197,6 +197,56 @@ table {
     transform: translate3d(4px, 0, 0);
   }
 }
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+.swing {
+  transition: all 1s;
+}
+.swing:hover {
+  animation: swing 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
 .navigation .checkbox {
   display: none;
 }
@@ -607,6 +657,13 @@ table {
   background-color: #B5854E;
   border-color: #B5854E;
 }
+.h {
+  display: flex;
+  justify-content: center;
+}
+.h h2 {
+  margin-bottom: 50px;
+}
 h2.gallery_header {
   color: #B5854E;
   text-align: center;
@@ -719,7 +776,7 @@ h2.gallery_header {
   width: 80%;
   height: 350px;
   position: relative;
-  margin: 15px 15px;
+  margin: 0px 15px 10px;
 }
 @media ( min-width: 700px ) {
   .developer {
@@ -787,6 +844,13 @@ h2.gallery_header {
 .developer:hover .developer_content {
   opacity: 1;
   transform: scale(1);
+}
+.developer_heading {
+  display: flex;
+  justify-content: center;
+}
+.developer_heading h2 {
+  margin-bottom: 50px;
 }
 .social_media a {
   width: 30px;
