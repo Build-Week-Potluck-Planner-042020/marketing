@@ -776,7 +776,7 @@ h2.gallery_header {
   width: 80%;
   height: 350px;
   position: relative;
-  margin: 0px 15px 10px;
+  margin: 0px 15px 80px;
 }
 @media ( min-width: 700px ) {
   .developer {
