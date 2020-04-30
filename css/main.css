@@ -693,6 +693,20 @@ h2.gallery_header {
   opacity: 1;
   transform: scale(1);
 }
+.social_media a {
+  width: 30px;
+  cursor: pointer;
+}
+.social_media i {
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  font-size: 25px;
+  z-index: 100000;
+}
+.social_media i:hover {
+  cursor: pointer;
+}
 .developers .developer:nth-child( 2 ) .developer_information {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/lasagne.jpg");
   background-size: cover;
