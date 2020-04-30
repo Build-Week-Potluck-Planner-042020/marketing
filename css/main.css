@@ -127,29 +127,95 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@keyframes fade {
+@-webkit-keyframes fade {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-3rem);
     transform: translateY(-3rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
     transform: none;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0);
   }
 }
 .navigation .checkbox {
   display: none;
 }
 .navigation .checkbox:checked ~ .navigation_background {
+  -webkit-transform: scale(145);
+  -ms-transform: scale(145);
   transform: scale(145);
 }
 @media ( min-width: 700px ) {
   .navigation .checkbox:checked ~ .navigation_background {
+    -webkit-transform: scale(200);
+    -ms-transform: scale(200);
     transform: scale(200);
   }
 }
 @media ( min-width: 1200px ) {
   .navigation .checkbox:checked ~ .navigation_background {
+    -webkit-transform: scale(300);
+    -ms-transform: scale(300);
     transform: scale(300);
   }
 }
@@ -162,10 +228,14 @@ table {
 }
 .navigation .checkbox:checked + .button .button_style::before {
   top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .navigation .checkbox:checked + .button .button_style::after {
   top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .navigation .button {
@@ -177,6 +247,7 @@ table {
   width: 2.7rem;
   border-radius: 50%;
   background-color: whitesmoke;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -204,7 +275,9 @@ table {
   content: "";
   position: absolute;
   left: 0;
-  transition: all 0.1s;
+  -webkit-transition: all 0.1s 0 linear;
+  -o-transition: all 0.1s 0 linear;
+  transition: all 0.1s 0 linear;
 }
 .navigation .button .button_style::before {
   top: -0.4rem;
@@ -221,7 +294,9 @@ table {
   right: 2.7rem;
   background-image: radial-gradient(#7e4113, #491C00);
   z-index: 8;
-  transition: all 0.8s ease-in;
+  -webkit-transition: all 0.8s ease-in linear;
+  -o-transition: all 0.8s ease-in linear;
+  transition: all 0.8s ease-in linear;
 }
 .navigation .nav {
   height: 100vh;
@@ -231,12 +306,16 @@ table {
   right: 0;
   z-index: 9;
   opacity: 0;
-  transition: all 0.8s cubic-bezier(0.38, -0.95, 0.215, 1.85);
+  -webkit-transition: all 0.8s cubic-bezier(0.38, -0.95, 0.215, 1.85) linear;
+  -o-transition: all 0.8s cubic-bezier(0.38, -0.95, 0.215, 1.85) linear;
+  transition: all 0.8s cubic-bezier(0.38, -0.95, 0.215, 1.85) linear;
 }
 .navigation .nav .nav_list {
   position: absolute;
   top: 30%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   list-style: none;
 }
@@ -254,32 +333,16 @@ table {
   width: 100%;
   padding: 20px 50px;
   border: 2px solid whitesmoke;
-  transition: all 0.6s;
+  -webkit-transition: all 0.6s 0 linear;
+  -o-transition: all 0.6s 0 linear;
+  transition: all 0.6s 0 linear;
 }
 .navigation .nav .nav_list .item .link:hover {
   opacity: 1;
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   color: #A7632F;
   background-color: whitesmoke;
-}
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%,
-  80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%,
-  50%,
-  70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%,
-  60% {
-    transform: translate3d(4px, 0, 0);
-  }
 }
 .header {
   height: 90vh;
@@ -298,12 +361,16 @@ table {
   bottom: 0;
   left: 0;
   z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_platter_small.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_small.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_small.jpg");
   background-size: cover;
   background-position: bottom;
 }
 @media ( min-width: 700px ) {
   .header::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_platter_medium.jpg");
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_medium.jpg");
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_medium.jpg");
     background-size: cover;
     background-position: bottom;
@@ -311,6 +378,8 @@ table {
 }
 @media ( min-width: 1200px ) {
   .header::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_platter_large.jpg");
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_large.jpg");
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_platter_large.jpg");
     background-size: cover;
     background-position: bottom;
@@ -525,13 +594,13 @@ table {
   opacity: 0;
 }
 .cards .card .content .tags h4 {
-  color: white;
+  color: whitesmoke;
   font-size: 1.4rem;
   letter-spacing: 6px;
   margin-bottom: 10px;
 }
 .cards .card .content .tags p {
-  color: white;
+  color: whitesmoke;
   font-size: 1rem;
   letter-spacing: 1.2px;
   margin: 15px 38px 0;
@@ -556,7 +625,7 @@ table {
   transition: all 0.8s;
 }
 .cards .card .card_button:hover {
-  color: white;
+  color: whitesmoke;
   background-color: #B5854E;
   border-color: #B5854E;
 }
@@ -595,12 +664,16 @@ h2.gallery_header {
   object-fit: cover;
 }
 .header_about_us::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_small.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_small.jpg");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_small.jpg");
   background-size: cover;
   background-position: bottom;
 }
 @media ( min-width: 700px ) {
   .header_about_us::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_medium.jpg");
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_medium.jpg");
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_medium.jpg");
     background-size: cover;
     background-position: bottom;
@@ -608,6 +681,8 @@ h2.gallery_header {
 }
 @media ( min-width: 1200px ) {
   .header_about_us::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url("../images/headers/hero_large.jpg");
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_large.jpg");
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/headers/hero_large.jpg");
     background-size: cover;
     background-position: bottom;
@@ -619,6 +694,48 @@ h2.gallery_header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.developers .developer:nth-child( 2 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/lasagne.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/lasagne.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/lasagne.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 3 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/mac_cheese.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/mac_cheese.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/mac_cheese.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 4 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/ice_cream.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/ice_cream.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/ice_cream.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 5 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/hamburguer.jpeg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/hamburguer.jpeg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/hamburguer.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 7 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/pizza.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/pizza.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/pizza.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 8 ) .developer_information {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/developers/chocolate.jpg");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/chocolate.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/chocolate.jpg");
+  background-size: cover;
+  background-position: bottom;
 }
 .developer {
   width: 80%;
@@ -678,13 +795,13 @@ h2.gallery_header {
   transition: all 1s;
 }
 .developer .developer_content h4 {
-  color: white;
+  color: whitesmoke;
   font-size: 1.4rem;
   letter-spacing: 6px;
   margin-bottom: 10px;
 }
 .developer .developer_content p {
-  color: white;
+  color: whitesmoke;
   font-size: 1rem;
   letter-spacing: 1.2px;
   margin: 15px 38px 0;
@@ -699,43 +816,10 @@ h2.gallery_header {
 }
 .social_media i {
   cursor: pointer;
-  color: white;
+  color: whitesmoke;
   margin: 10px;
   font-size: 25px;
   z-index: 100000;
-}
-.social_media i:hover {
-  cursor: pointer;
-}
-.developers .developer:nth-child( 2 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/lasagne.jpg");
-  background-size: cover;
-  background-position: bottom;
-}
-.developers .developer:nth-child( 3 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/mac_cheese.jpg");
-  background-size: cover;
-  background-position: bottom;
-}
-.developers .developer:nth-child( 4 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/ice_cream.jpg");
-  background-size: cover;
-  background-position: bottom;
-}
-.developers .developer:nth-child( 5 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/hamburguer.jpeg");
-  background-size: cover;
-  background-position: bottom;
-}
-.developers .developer:nth-child( 7 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/pizza.jpg");
-  background-size: cover;
-  background-position: bottom;
-}
-.developers .developer:nth-child( 8 ) .developer_information {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/chocolate.jpg");
-  background-size: cover;
-  background-position: bottom;
 }
 .footer {
   height: 150px;
@@ -750,8 +834,6 @@ h2.gallery_header {
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-@media ( min-width: 500px ) {
 }
 .footer .stay_connected h4 {
   font-size: 1.6rem;

@@ -7,8 +7,7 @@
 
     .checkbox:checked ~ .navigation_background
     {
-
-        transform: scale( 145 );
+        scale( 145 );
 
         @media @medium
         {
@@ -59,8 +58,7 @@
 
         &:hover ::before
         {
-            top: -0.6rem;
-           
+            top: -0.6rem;   
         }
     
         &:hover ::after
@@ -83,7 +81,6 @@
                 display: inline-block;
                 background-color: black;
             }
-
 
             &::before, 
             &::after
@@ -114,7 +111,7 @@
         position: fixed;
         top: 1.6rem;
         right: 2.7rem;
-        background-image: radial-gradient(rgb(126, 65, 19), #491C00 );
+        background-image: radial-gradient( rgb(126, 65, 19), #491C00 );
         z-index: 8;
         transition: all 0.8s ease-in;
     }
@@ -130,7 +127,6 @@
         opacity: 0;
         transition: all 0.8s cubic-bezier( 0.38, -0.95, 0.215, 1.85 );
         
-
         .nav_list
         { 
             position: absolute;
@@ -145,18 +141,16 @@
                 text-align: center;
                 width: 100%;
                 
-
                 .link
                 {
-                    
                     display: inline-block;
                     text-decoration: none;
                     font-size: 1.4rem;
                     font-weight: 400;
-                    color:whitesmoke;
+                    color: @white_font;
                     width: 100%;
                     padding: 20px 50px;
-                    border: 2px solid whitesmoke;
+                    border: 2px solid @white_font;
                     transition: all 0.6s;
                  
                     &:hover
@@ -164,33 +158,10 @@
                         opacity: 1;
                         animation: shake 1s cubic-bezier( 0.36, 0.07, 0.19, 0.97) both;
                         color: @main_brown;
-                        background-color: whitesmoke;
+                        background-color: @white_font;
                     }
                 }
             }
         }
-    }
-}
-
-@keyframes shake 
-{
-    10%, 90% 
-    {
-      transform: translate3d( -1px, 0, 0 );
-    }
-    
-    20%, 80% 
-    {
-      transform: translate3d( 2px, 0, 0 );
-    }
-  
-    30%, 50%, 70% 
-    {
-      transform: translate3d( -4px, 0, 0 );
-    }
-  
-    40%, 60% 
-    {
-      transform: translate3d( 4px, 0, 0 );
     }
 }

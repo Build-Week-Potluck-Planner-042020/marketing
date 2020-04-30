@@ -5,6 +5,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    .developer:nth-child( 2 ) .developer_information 
+    {
+        .background( 0.8, "../images/developers/lasagne.jpg" );
+    }
+
+    .developer:nth-child( 3 ) .developer_information 
+    {
+        .background( 0.8, "../images/developers/mac_cheese.jpg" );
+    }
+
+    .developer:nth-child( 4 ) .developer_information 
+    {
+        .background( 0.8, "../images/developers/ice_cream.jpg" );
+    }
+
+    .developer:nth-child( 5 ) .developer_information 
+    {
+        .background( 0.8, "../images/developers/hamburguer.jpeg" );
+    }
+
+    .developer:nth-child( 7 ) .developer_information 
+    {
+        .background( 0.8,"../images/developers/pizza.jpg" );
+    }
+    
+    .developer:nth-child( 8 ) .developer_information 
+    {
+        .background( 0.8, "../images/developers/chocolate.jpg" );
+    }
 }
 
 .developer
@@ -17,7 +47,6 @@
     @media @medium
     {
         width: 450px;
-            
     }
 
     @media @medium_large
@@ -77,7 +106,7 @@
 
         h4
         {
-            color: white;
+            color: @white_font;
             font-size: 1.4rem;
             letter-spacing: 6px;
             margin-bottom: 10px;
@@ -85,7 +114,7 @@
 
         p
         {
-            color: white;
+            color: @white_font;
             font-size: 1rem;
             letter-spacing: 1.2px;
             margin: 15px 38px 0; 
@@ -108,43 +137,8 @@
 .social_media i
 {
     cursor: pointer;
-    color: white;
+    color: @white_font;
     margin: 10px;
     font-size: 25px;
     z-index: 100000;
-}
-
-.social_media i:hover
-{
-    cursor: pointer;
-}
-
-.developers .developer:nth-child( 2 ) .developer_information 
-{
-    .background( 0.8, "../images/developers/lasagne.jpg" );
-}
-
-.developers .developer:nth-child( 3 ) .developer_information 
-{
-    .background( 0.8, "../images/developers/mac_cheese.jpg" );
-}
-
-.developers .developer:nth-child( 4 ) .developer_information 
-{
-    .background( 0.8, "../images/developers/ice_cream.jpg" );
-}
-
-.developers .developer:nth-child( 5 ) .developer_information 
-{
-    .background( 0.8, "../images/developers/hamburguer.jpeg" );
-}
-
-.developers .developer:nth-child( 7 ) .developer_information 
-{
-    .background( 0.8,"../images/developers/pizza.jpg" );
-}
-
-.developers .developer:nth-child( 8 ) .developer_information 
-{
-    .background( 0.8, "../images/developers/chocolate.jpg" );
 }
