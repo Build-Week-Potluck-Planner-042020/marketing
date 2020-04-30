@@ -609,6 +609,104 @@ h2.gallery_header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("../images/about_hero_large.jpg");
   }
 }
+.developers {
+  margin: 100px auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.developer {
+  width: 80%;
+  height: 350px;
+  position: relative;
+  margin: 50px 0 30px;
+}
+@media ( min-width: 700px ) {
+  .developer {
+    width: 450px;
+  }
+}
+@media ( min-width: 1000px ) {
+  .developer {
+    width: 334px;
+  }
+}
+@media ( min-width: 1200px ) {
+  .developer {
+    width: 400px;
+  }
+}
+.developer .developer_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+}
+.developer .developer_image img {
+  width: 100%;
+  height: 100%;
+}
+.developer .developer_information {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: -10;
+}
+.developer:hover .developer_image {
+  width: 100px;
+  height: 100px;
+  left: 40%;
+  top: 85%;
+}
+.developer .developer_content {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 1s;
+}
+.developer:hover .developer_content {
+  opacity: 1;
+  transform: scale(1);
+}
+.developers .developer:nth-child( 2 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/lasagne.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 3 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/mac_cheese.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 4 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/ice_cream.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 5 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/hamburguer.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 7 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/pizza.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.developers .developer:nth-child( 8 ) .developer_information {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/developers/chocolate.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
 .footer {
   height: 150px;
   width: 100%;
